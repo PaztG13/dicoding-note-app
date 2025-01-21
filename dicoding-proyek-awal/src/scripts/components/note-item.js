@@ -26,6 +26,10 @@ class NoteItem extends HTMLElement {
         return this._note;
     }
 
+    _emptyContent() {
+        this._shadowRoot.innerHTML = ``;
+    }
+
     _updateStyle() {
         this._style.textContent = `
             .note-card {
