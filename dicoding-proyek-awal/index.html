@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notes!</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+</head>
+<body>
+    <!--HEADER BAR-->
+    <header>
+        <header-bar></header-bar>
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container">
+        <div id="formContainer" class="form-container">
+            <form action="#">
+                <div class="form-title">
+                    <input id="title" name="title" type="text" placeholder="Title" required />
+                </div>
+                <div class="form-body">
+                    <input id="body" name="body" type="textarea" placeholder="What's on your mind?" required />
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="noteListContainer" class="note-list-container">
+            <note-list></note-list>
+        </div>
+    </div>
+
+    <!--FOOTER BAR-->
+    <footer-bar></footer-bar>
+
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>
