@@ -6,7 +6,7 @@ const home = () => {
     const noteListElement = noteListContainerElement.querySelector('note-list');
 
     const displayNotes = (notes) => {
-        const noteItemElements = notesData.map((notes) => {
+        const noteItemElements = notes.map((notes) => {
             const noteItemElement = document.createElement('note-item');
             noteItemElement.note = notes;
 
@@ -23,6 +23,8 @@ const home = () => {
         });
         Utils.showElement(noteListElement);
     };
+
+    displayNotes(notesData.getAll());
 };
 
 export default home;
