@@ -19,7 +19,7 @@ body {
     gap: 25px;
 }
 
-.form-container {
+/* .form-container {
     padding: 5%;
     display: grid;
     justify-content: center;
@@ -33,10 +33,4 @@ form {
 
 form input {
     border: 0;
-}
-
-/*NOTE CARD*/
-
-.note-list-container {
-    display: block;
-}
+} */

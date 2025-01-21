@@ -34,7 +34,7 @@ class NoteItem extends HTMLElement {
         this._style.textContent = `
             .note-card {
                 padding: 2% 5%;
-                height: 150px;
+                height: 250px;
                 background: rgba(22,22,22,0.5);
                 border-radius: 15px;
                 border-top: 2px solid rgb(50, 118, 196);
