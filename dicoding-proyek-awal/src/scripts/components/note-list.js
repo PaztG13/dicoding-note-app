@@ -20,7 +20,7 @@ class NoteList extends HTMLElement {
             .list {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
-                gap: 5px;
+                gap: 15px;
             }
         `;
     }

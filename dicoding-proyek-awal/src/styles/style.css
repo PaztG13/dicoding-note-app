@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    margin: 2.5% 1.5%;
+    margin: 2.5% 5%;
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 25px;

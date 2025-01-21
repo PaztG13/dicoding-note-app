@@ -33,19 +33,26 @@ class NoteItem extends HTMLElement {
     _updateStyle() {
         this._style.textContent = `
             .note-card {
-                width: 25%;
-                padding: 2%;
-                background: #333;
-                display: grid;
-                gap: 5px;
+                padding: 2% 5%;
+                height: 150px;
+                background: rgba(22,22,22,0.5);
                 border-radius: 15px;
+                border-top: 2px solid rgb(50, 118, 196);
+                transition: 0.2s ease-in-out;
+            }
+
+            .note-card:hover {
+                transform: scale(1.05);
+                box-shadow: -1px 12px 49px -11px rgba(0,0,0,0.75);
             }
 
             h2 {
+                margin-bottom: 0;
                 font-size: 1.2em;
             }
 
             span {
+                margin: 0;
                 font-size: .7em;
                 font-style: italic;
                 letter-spacing: 1px;
