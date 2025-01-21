@@ -64,9 +64,9 @@ class NoteItem extends HTMLElement {
         this._shadowRoot.appendChild(this._style);
         this._shadowRoot.innerHTML += `
             <div class="note-card">
-                <h2>${note.title}</h2>
-                <span>${new Date(note.createdAt).toLocaleDateString()}</span>
-                <p>${note.body}</p>
+                <h2>${this._note.title}</h2>
+                <span>${new Date(this._note.createdAt).toLocaleDateString()}</span>
+                <p>${this._note.body}</p>
             </div>
         `;
     }
