@@ -33,7 +33,7 @@ class NoteItem extends HTMLElement {
     _updateStyle() {
         this._style.textContent = `
             .note-card {
-                padding: 2% 5%;
+                padding: 2% 8%;
                 height: 250px;
                 background: rgba(22,22,22,0.5);
                 border-radius: 15px;

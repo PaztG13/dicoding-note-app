@@ -39,6 +39,12 @@ class HeaderBar extends HTMLElement {
                 letter-spacing: 3px;
                 font-style: italic;
             }
+
+            @media only screen and (max-width: 720px) {
+                div {
+                    margin-top: 15%;
+                }
+            }
         `;
     }
 

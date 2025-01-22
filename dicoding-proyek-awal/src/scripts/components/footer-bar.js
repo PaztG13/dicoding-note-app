@@ -33,6 +33,12 @@ class FooterBar extends HTMLElement {
                 font-weight: 300;
                 letter-spacing: 5px;
             }
+
+            @media only screen and (max-width: 720px) {
+                div {
+                    margin: 15% 0;
+                }
+            }
         `;
     }
 

@@ -15,16 +15,33 @@
     <!--CONTAINER-->
     <div class="container">
         <div id="formContainer" class="form-container">
-            <!-- <form action="#">
+            <form action="#">
                 <div class="form-title">
-                    <input id="title" name="title" type="text" placeholder="Title" required />
+                    <input
+                    id="title"
+                    name="title"
+                    type="text"
+                    placeholder="Title"
+                    required
+                    autocomplete="off"
+                    aria-describedby="titleValidation"
+                    />
+                    <p id="titleValidation" class="validation-message" aria-live="polite"></p>
                 </div>
                 <div class="form-body">
-                    <input id="body" name="body" type="textarea" placeholder="What's on your mind?" required />
+                    <input
+                    id="body"
+                    name="body"
+                    type="textarea"
+                    placeholder="What's on your mind?"
+                    required
+                    autocomplete="off"
+                    aria-describedby="bodyValidation"
+                    />
+                    <p id="bodyValidation" class="validation-message" aria-live="polite"></p>
                 </div>
                 <button type="submit">Submit</button>
-            </form> -->
-            <form-main></form-main>
+            </form>
         </div>
         <div id="noteListContainer" class="note-list-container">
             <note-list></note-list>
