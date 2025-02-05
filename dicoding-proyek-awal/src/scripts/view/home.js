@@ -1,5 +1,5 @@
 import Utils from '../utils.js';
-import notesData from "../data/notes.js";
+import notesData from "../data/local/notes.js";
 
 const home = () => {
     const noteListContainerElement = document.querySelector('#noteListContainer');
