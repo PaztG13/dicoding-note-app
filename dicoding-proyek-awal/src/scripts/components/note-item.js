@@ -48,7 +48,8 @@ class NoteItem extends HTMLElement {
 
             h2 {
                 margin-bottom: 0;
-                font-size: 1.2em;
+                font-size: 1.4em;
+                font-weight: 800;
             }
 
             span {

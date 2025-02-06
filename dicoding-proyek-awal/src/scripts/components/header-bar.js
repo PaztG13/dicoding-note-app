@@ -24,7 +24,7 @@ class HeaderBar extends HTMLElement {
             }
 
             div {
-                margin: 5% 0 5% 0;
+                margin: 3% 0 2% 0;
                 text-align: center;
             }
 
