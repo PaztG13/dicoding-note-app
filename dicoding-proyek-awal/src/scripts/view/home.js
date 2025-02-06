@@ -1,5 +1,5 @@
 import Utils from '../utils.js';
-import { notesData } from "../data/remote/notes-api.js";
+import { notesData, createNote, deleteNote } from "../data/remote/notes-api.js";
 
 const home = async () => {
     const data = await notesData();
@@ -18,27 +18,36 @@ const home = async () => {
         noteListElement.append(...noteItemElements);
     };
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const noteForm = document.querySelector('form');
+    const noteForm = document.querySelector('form');
 
-        const inputNoteTitle = noteForm.elements.title;
-        const inputNoteBody = noteForm.elements.body;
+    const inputNoteTitle = noteForm.elements.title;
+    const inputNoteBody = noteForm.elements.body;
 
-        noteForm.addEventListener('submit', function (event) {
-            event.preventDefault();
+    noteForm.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-            const note = {
-                title: inputNoteTitle.value,
-                body: inputNoteBody.value,
-            };
+        const note = {
+            title: inputNoteTitle.value,
+            body: inputNoteBody.value,
+        };
 
-            switch (event.submitter.textContent) {
-                case 'Submit':
-                    createNote(note);
-                    break;
-            }
-        })
-    })
+        switch (event.submitter.textContent) {
+            case 'Submit':
+                createNote(note);
+                break;
+        }
+    });
+
+    const deleteButtonElement = document.querySelectorAll('.delete-note');
+    console.log(deleteButtonElement);
+    deleteButtonElement.forEach((button) => {
+        button.addEventListener('click', (event) => {
+            const noteId = event.target.dataset.id;
+
+            deleteNote(noteId);
+        });
+    });
+
 
     displayNotes(data);
 };
