@@ -1,4 +1,4 @@
-const endpoint = 'https://notes-api.dicoding.dev/v2#';
+const endpoint = 'https://notes-api.dicoding.dev/v2';
 
 const notesData = async () => {
     try {
