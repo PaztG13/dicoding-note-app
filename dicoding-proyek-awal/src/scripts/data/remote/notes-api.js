@@ -1,13 +1,12 @@
 const endpoint = 'https://notes-api.dicoding.dev/v2';
 
-const notesData = async () => {
+export const notesData = async () => {
     try {
         const response = await fetch(`${endpoint}/notes`, {
             method: 'GET',
         });
         const notes = await response.json();
         if (response.ok) {
-            console.log(notes.data);
             return notes.data;
         }
     } catch (error) {
@@ -15,4 +14,20 @@ const notesData = async () => {
     }
 };
 
-export default notesData;
+export const createNote = async (note) => {
+    try {
+        const response = await fetch(`${endpoint}/notes`, {
+            method: 'POST',
+            body: JSON.stringify({
+                title: note.title,
+                body: note.body
+            }),
+        });
+        const responseJson = await response.json();
+        if (response.ok) {
+            alert(responseJson.message);
+        }
+    } catch (error) {
+        alert(error.message);
+    }
+}

@@ -1,7 +1,8 @@
 import Utils from '../utils.js';
-import notesData from "../data/remote/notes-api.js";
+import { notesData } from "../data/remote/notes-api.js";
 
-const home = () => {
+const home = async () => {
+    const data = await notesData();
     const noteListContainerElement = document.querySelector('#noteListContainer');
     const noteListElement = noteListContainerElement.querySelector('note-list');
 
@@ -17,14 +18,29 @@ const home = () => {
         noteListElement.append(...noteItemElements);
     };
 
-    const showNoteList = () => {
-        Array.from(noteListContainerElement.children).forEach((element) => {
-            Utils.hideElement(element);
-        });
-        Utils.showElement(noteListElement);
-    };
+    document.addEventListener('DOMContentLoaded', () => {
+        const noteForm = document.querySelector('form');
 
-    displayNotes(notesData());
+        const inputNoteTitle = noteForm.elements.title;
+        const inputNoteBody = noteForm.elements.body;
+
+        noteForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const note = {
+                title: inputNoteTitle.value,
+                body: inputNoteBody.value,
+            };
+
+            switch (event.submitter.textContent) {
+                case 'Submit':
+                    createNote(note);
+                    break;
+            }
+        })
+    })
+
+    displayNotes(data);
 };
 
 export default home;
