@@ -62,4 +62,4 @@ export const deleteNote = async (id) => {
     } catch (error) {
         alert(error.message);
     }
-}
+};
